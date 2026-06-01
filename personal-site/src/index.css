@@ -12,6 +12,22 @@
 
 h1 {
   font-family: monospace;
-  font-size: xx-large;
+  font-size: 50px;
   color: beige;
 }
+
+h2 {
+  font-family: monospace;
+  font-size: 35px;
+  color: beige;
+}
+
+.badge-text{
+  font-family: monospace;
+  font-size: 20px;
+  color: beige;
+
+}
+
+
+

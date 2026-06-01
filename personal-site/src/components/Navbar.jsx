@@ -2,7 +2,7 @@
 
 export default function Navbar(){
     return(
-       <nav className="bg-indigo-950 h-[50px] font-mono">
+       <nav className="bg-indigo-950 h-[50px] font-mono sticky top-0">
             <ul className="flex gap-10 px-8 justify-end items-center h-full">
                 <li className="text-olive-50">
                     About
