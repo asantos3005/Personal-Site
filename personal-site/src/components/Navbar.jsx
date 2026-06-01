@@ -2,8 +2,8 @@
 
 export default function Navbar(){
     return(
-       <nav className="bg-indigo-950 h-[50px]">
-            <ul className="flex gap-10 justify-end items-center h-full">
+       <nav className="bg-indigo-950 h-[50px] font-mono">
+            <ul className="flex gap-10 px-8 justify-end items-center h-full">
                 <li className="text-olive-50">
                     About
                 </li>

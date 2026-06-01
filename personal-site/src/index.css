@@ -1,5 +1,17 @@
+.body-text{
+  color: beige;
+  font-family: monospace;
+  font-size: large;
+}
 
-#root{
-  padding-left: 15px;
-  padding-right: 15px;
+.heading-text{
+  color: beige;
+  font-family: monospace;
+
+}
+
+h1 {
+  font-family: monospace;
+  font-size: xx-large;
+  color: beige;
 }
