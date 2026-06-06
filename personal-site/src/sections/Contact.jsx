@@ -8,8 +8,8 @@ export default function Contact(){
 
             <div className="flex justify-center gap-5 mt-3">
                 <a href="resume placeholder" className="bg-olive-50 p-5 rounded-md">My Resume</a>
-                <a href="resume placeholder" className="bg-olive-50 p-5 rounded-md">GitHub</a>
-                <a href="resume placeholder" className="bg-olive-50 p-5 rounded-md">Linkedin</a>
+                <a href="https://github.com/asantos3005" className="bg-olive-50 p-5 rounded-md">GitHub</a>
+                <a href="https://www.linkedin.com/in/andrew-santos-a23261284/" className="bg-olive-50 p-5 rounded-md">Linkedin</a>
             </div>
             
         </section>
