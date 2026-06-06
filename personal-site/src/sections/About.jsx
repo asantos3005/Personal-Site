@@ -2,7 +2,7 @@ import profile from '../assets/profile.jpeg'
 
 export default function About(){
     return(
-        <section className="h-screen bg-indigo-950 flex items-center px-8 scroll-mt-[50px]" id="about">
+        <section className="h-screen bg-indigo-950 flex items-center px-8" id="about">
             <div className='pr-[15px]'>
                 <h1>About Me</h1>
                 <p className='body-text mb-[20px]'>

@@ -3,9 +3,9 @@ import polygonGuy from '../assets/andrew3d.png'
 
 export default function Landing() {
   return (
-    <section className="relative h-screen overflow-hidden bg-indigo-500">
+    <section className="relative h-screen overflow-hidden bg-slate-900">
 
-      <div className="flex flex-col justify-center items-center mt-[30vh] gap-1">
+      <div className="flex flex-col justify-center items-center mt-[30vh]">
         <h1>Welcome to Andrew's Portfolio</h1>
         <h3 className="">Follow my journey</h3>
         <a
@@ -20,7 +20,7 @@ export default function Landing() {
                 viewBox="0 0 384 512"
                 className="pointer-events-none block w-[15px]"
                 initial={{ y: 0 }}
-                animate={{ y: 12 }}
+                animate={{ y: 11 }}
                 transition={{
                   duration: 0.8,
                   repeat: Infinity,
@@ -35,10 +35,88 @@ export default function Landing() {
               </motion.svg>
             </span>
           </a>
-        
       </div>
       
+      {/* Stars */}
+      <motion.div
+        className="absolute left-[420px] top-[140px] h-[7px] w-[7px] rounded-full bg-white"
+        animate={{
+          scale: [0, 0.8, 0],
+          boxShadow: [
+            "0px 0px 0px 0px rgb(255, 255, 255)",
+            "0px 0px 8px 4px rgb(255, 255, 255)",
+            "0px 0px 0px 0px rgb(255, 255, 255)",
+          ],
+        }}
+        transition={{
+          duration: 3.2,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.06, 1],
+          delay: 0.4
+
+        }}
+      />
+
+      <motion.div
+        className="absolute right-[150px] top-[140px] h-[7px] w-[7px] rounded-full bg-white"
+        animate={{
+          scale: [0, 0.8, 0],
+          boxShadow: [
+            "0px 0px 0px 0px rgb(255, 255, 255)",
+            "0px 0px 8px 4px rgb(255, 255, 255)",
+            "0px 0px 0px 0px rgb(255, 255, 255)",
+          ],
+        }}
+        transition={{
+          duration: 3.2,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.06, 1],
+          delay: 0.2
+
+        }}
+      />
+
+      <motion.div
+        className="absolute right-[400px] top-[120px] h-[7px] w-[7px] rounded-full bg-white"
+        animate={{
+          scale: [0, 0.8, 0],
+          boxShadow: [
+            "0px 0px 0px 0px rgb(255, 255, 255)",
+            "0px 0px 8px 4px rgb(255, 255, 255)",
+            "0px 0px 0px 0px rgb(255, 255, 255)",
+          ],
+        }}
+        transition={{
+          duration: 3.2,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.5, 1],
+          delay: 0.6
+        }}
+      />
+
+      <motion.div
+        className="absolute left-[115px] top-[120px] h-[7px] w-[7px] rounded-full bg-white"
+        animate={{
+          scale: [0, 0.8, 0],
+          boxShadow: [
+            "0px 0px 0px 0px rgb(255, 255, 255)",
+            "0px 0px 8px 4px rgb(255, 255, 255)",
+            "0px 0px 0px 0px rgb(255, 255, 255)",
+          ],
+        }}
+        transition={{
+          duration: 3.2,
+          repeat: Infinity,
+          ease: "easeInOut",
+          times: [0, 0.06, 1],
+        }}
+      />
      
+
+     {/* Waves and Boat Animation */}
       <motion.svg
         viewBox="0 0 1440 320"
         preserveAspectRatio="none"
