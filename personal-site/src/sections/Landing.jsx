@@ -1,8 +1,22 @@
 import { motion } from "motion/react";
+import polygonGuy from '../assets/andrew3d.png' 
 
 export default function Landing() {
   return (
     <section className="relative h-screen overflow-hidden bg-indigo-500">
+      <motion.img src={polygonGuy} alt="polygonal 3d model of andrew in a rowboat" 
+      className="absolute bottom-[150px] right-20 max-w-[300px] z-3"
+      initial={{ y: 0 }}
+        animate={{ y: 20 }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+          delay: 0,
+        }}
+      />
+
       <motion.svg
         viewBox="0 0 1440 320"
         preserveAspectRatio="none"
@@ -46,7 +60,7 @@ export default function Landing() {
       <motion.svg
         viewBox="0 0 1440 320"
         preserveAspectRatio="none"
-        className="absolute bottom-[40px] left-0 block h-80 w-full"
+        className="absolute bottom-[40px] left-0 block h-80 w-full z-5"
         initial={{ y: 0 }}
         animate={{ y: 20 }}
         transition={{
@@ -66,7 +80,7 @@ export default function Landing() {
       <motion.svg
         viewBox="0 0 1440 320"
         preserveAspectRatio="none"
-        className="absolute bottom-0 left-0 block h-80 w-full"
+        className="absolute bottom-0 left-0 block h-80 w-full z-5"
         initial={{ y: 0 }}
         animate={{ y: 20 }}
         transition={{
