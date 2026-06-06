@@ -4,19 +4,7 @@ import polygonGuy from '../assets/andrew3d.png'
 export default function Landing() {
   return (
     <section className="relative h-screen overflow-hidden bg-indigo-500">
-      <motion.img src={polygonGuy} alt="polygonal 3d model of andrew in a rowboat" 
-      className="absolute bottom-[150px] right-20 max-w-[300px] z-3"
-      initial={{ y: 0 }}
-        animate={{ y: 20 }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          repeatType: "mirror",
-          ease: "easeInOut",
-          delay: 0,
-        }}
-      />
-
+     
       <motion.svg
         viewBox="0 0 1440 320"
         preserveAspectRatio="none"
@@ -56,6 +44,20 @@ export default function Landing() {
           d="M0,160 C240,260 480,60 720,160 C960,260 1200,60 1440,160 L1440,320 L0,320 Z"
         />
       </motion.svg>
+
+       <motion.img src={polygonGuy} alt="polygonal 3d model of andrew in a rowboat" 
+      className="absolute bottom-[150px] right-20 max-w-[300px] z-3"
+      initial={{ y: 0 }}
+        animate={{ y: 20 }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+          delay: 0.3,
+        }}
+      />
+
 
       <motion.svg
         viewBox="0 0 1440 320"
