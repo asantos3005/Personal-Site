@@ -2,7 +2,7 @@ import SkillBadge from "../components/SkillBadge"
 
 export default function Skills(){
     return(
-        <section className="h-screen bg-indigo-950 px-8 ">
+        <section className="h-screen bg-indigo-950 px-8 scroll-mt-[50px]" id="skills">
             <h1>Skills</h1>
             <div className="flex justify-evenly">
 

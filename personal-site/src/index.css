@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .body-text{
   color: beige;
   font-family: monospace;

@@ -2,7 +2,7 @@
 export default function Contact(){
 
     return(
-        <section className="h-screen bg-indigo-950 font-mono px-8">
+        <section className="h-screen bg-indigo-950 font-mono px-8 scroll-mt-[50px]" id="contact">
             <h1 className="mb-10">Contact Me</h1>
             <address className="block mx-auto w-fit text-4xl text-olive-50">andrewsan321@gmail.com</address>
 
