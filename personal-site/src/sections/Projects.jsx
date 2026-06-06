@@ -47,9 +47,17 @@ export default function Projects(){
                 />
                 ))}
 
-            {loading && <p>Loading Projects...</p>}
+            {loading && 
+            <div className="mt-5 text-olive-50 font-mono">
+                <p>{error}</p>
+            </div>
+            }
 
-            {error && <p>{error}</p>}
+            {error && 
+            <div className="mt-5 text-olive-50 font-mono">
+                <p>{error}</p>
+            </div>
+            }
         </section>
     )
 }
