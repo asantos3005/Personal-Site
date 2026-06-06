@@ -3,13 +3,29 @@ import ProjectContainer from "../components/ProjectContainer"
 
 export default function Projects(){
     const [projects, setProjects] = useState([])
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("/api/projects")
-        .then((data) => data.json())
-      .then((data) => {
-        setProjects(data);
-      });
+        async function loadProjects() {
+            try { 
+                const response = await fetch("/api/projects"); 
+                if (!response.ok) 
+                    { 
+                        throw new Error(`Request failed with status ${response.status}`); 
+                    } 
+                const data = await response.json(); 
+                setProjects(data); 
+            } 
+            catch (error) { 
+                console.error("Failed to load projects:", error); 
+                setError("Could not load projects."); 
+            } 
+            finally { 
+                setLoading(false); 
+            } 
+        }
+        loadProjects();
     }, []);
     
 
@@ -21,7 +37,7 @@ export default function Projects(){
             </form>
 
             {/* Container for all the projects */}
-            {projects.map((project) => (
+            {loading == false && projects.map((project) => (
                 <ProjectContainer
                     key={project.id}
                     projectName={project.title}
@@ -30,6 +46,10 @@ export default function Projects(){
                     demoLink={project.demoUrl}
                 />
                 ))}
+
+            {loading && <p>Loading Projects...</p>}
+
+            {error && <p>{error}</p>}
         </section>
     )
 }
