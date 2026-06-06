@@ -1,16 +1,23 @@
 import { motion } from "motion/react";
+import { flashingStarAnimation } from "../animations/landingPageAnimations";
 import polygonGuy from '../assets/andrew3d.png' 
 
 export default function Landing() {
   return (
     <section className="relative h-screen overflow-hidden bg-slate-900">
 
-      <div className="flex flex-col justify-center items-center mt-[30vh]">
-        <h1>Welcome to Andrew's Portfolio</h1>
-        <h3 className="">Follow my journey</h3>
+      <motion.div className="flex flex-col justify-center items-center mt-[30vh]"
+      initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.3,
+                scale: { type: "spring", visualDuration: 0.4, bounce: 0.2 },
+            }}>
+        <h1>Andrew Santos</h1>
+        <h3 className="">Welcome to my portfolio!</h3>
         <a
             href="#about"
-            className="body-text relative z-20 mt-5 !inline-flex flex-col items-center gap-1"
+            className="body-text relative z-20 mt-7 !inline-flex flex-col items-center"
           >
             <span>Scroll</span>
 
@@ -18,7 +25,7 @@ export default function Landing() {
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 384 512"
-                className="pointer-events-none block w-[15px]"
+                className="pointer-events-none block w-[12px]"
                 initial={{ y: 0 }}
                 animate={{ y: 11 }}
                 transition={{
@@ -35,19 +42,12 @@ export default function Landing() {
               </motion.svg>
             </span>
           </a>
-      </div>
+      </motion.div>
       
       {/* Stars */}
       <motion.div
         className="absolute left-[420px] top-[140px] h-[7px] w-[7px] rounded-full bg-white"
-        animate={{
-          scale: [0, 0.8, 0],
-          boxShadow: [
-            "0px 0px 0px 0px rgb(255, 255, 255)",
-            "0px 0px 8px 4px rgb(255, 255, 255)",
-            "0px 0px 0px 0px rgb(255, 255, 255)",
-          ],
-        }}
+        animate={flashingStarAnimation}
         transition={{
           duration: 3.2,
           repeat: Infinity,
@@ -60,14 +60,7 @@ export default function Landing() {
 
       <motion.div
         className="absolute right-[150px] top-[140px] h-[7px] w-[7px] rounded-full bg-white"
-        animate={{
-          scale: [0, 0.8, 0],
-          boxShadow: [
-            "0px 0px 0px 0px rgb(255, 255, 255)",
-            "0px 0px 8px 4px rgb(255, 255, 255)",
-            "0px 0px 0px 0px rgb(255, 255, 255)",
-          ],
-        }}
+        animate={flashingStarAnimation}
         transition={{
           duration: 3.2,
           repeat: Infinity,
@@ -80,14 +73,7 @@ export default function Landing() {
 
       <motion.div
         className="absolute right-[400px] top-[120px] h-[7px] w-[7px] rounded-full bg-white"
-        animate={{
-          scale: [0, 0.8, 0],
-          boxShadow: [
-            "0px 0px 0px 0px rgb(255, 255, 255)",
-            "0px 0px 8px 4px rgb(255, 255, 255)",
-            "0px 0px 0px 0px rgb(255, 255, 255)",
-          ],
-        }}
+        animate={flashingStarAnimation}
         transition={{
           duration: 3.2,
           repeat: Infinity,
@@ -99,14 +85,7 @@ export default function Landing() {
 
       <motion.div
         className="absolute left-[115px] top-[120px] h-[7px] w-[7px] rounded-full bg-white"
-        animate={{
-          scale: [0, 0.8, 0],
-          boxShadow: [
-            "0px 0px 0px 0px rgb(255, 255, 255)",
-            "0px 0px 8px 4px rgb(255, 255, 255)",
-            "0px 0px 0px 0px rgb(255, 255, 255)",
-          ],
-        }}
+        animate={flashingStarAnimation}
         transition={{
           duration: 3.2,
           repeat: Infinity,
