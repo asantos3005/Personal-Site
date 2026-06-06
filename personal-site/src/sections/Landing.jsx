@@ -4,7 +4,7 @@ import polygonGuy from '../assets/andrew3d.png'
 
 export default function Landing() {
   return (
-    <section className="relative h-screen overflow-hidden bg-slate-900">
+    <section className="relative h-screen overflow-hidden bg-slate-900" id="landing">
 
       <motion.div className="flex flex-col justify-center items-center mt-[30vh]"
       initial={{ opacity: 0, scale: 0 }}

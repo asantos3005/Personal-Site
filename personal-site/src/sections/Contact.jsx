@@ -1,3 +1,5 @@
+import { motion } from "motion/react"
+import { contactButtonsAnimation } from "../animations/contactPageAnimations"
 
 export default function Contact(){
 
@@ -7,14 +9,20 @@ export default function Contact(){
             <address className="block mx-auto w-fit text-4xl text-olive-50 mt-[30vh]">ajrsantos77@gmail.com</address>
 
             <div className="flex justify-center gap-5 mt-3">
-                <a className="bg-olive-50 p-5 rounded-md"
+                <motion.a className="bg-olive-50 p-5 rounded-md"
                 href="/Andrew-Santos-Software-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                >My Resume</a>
+                whileHover={contactButtonsAnimation}
+                >My Resume</motion.a>
 
-                <a href="https://github.com/asantos3005" className="bg-olive-50 p-5 rounded-md">GitHub</a>
-                <a href="https://www.linkedin.com/in/andrew-santos-a23261284/" className="bg-olive-50 p-5 rounded-md">Linkedin</a>
+                <motion.a href="https://github.com/asantos3005" className="bg-olive-50 p-5 rounded-md"
+                whileHover={contactButtonsAnimation}
+                >GitHub</motion.a>
+
+                <motion.a href="https://www.linkedin.com/in/andrew-santos-a23261284/" className="bg-olive-50 p-5 rounded-md"
+                whileHover={contactButtonsAnimation}
+                >Linkedin</motion.a>
             </div>
             
         </section>
