@@ -19,7 +19,9 @@ export default function Landing() {
             href="#about"
             className="body-text relative z-20 mt-7 !inline-flex flex-col items-center"
           >
-            <span>Scroll</span>
+            <motion.span
+            whileHover={{opacity: "70%"}}
+            >Scroll</motion.span>
 
             <span className="flex h-[35px] w-[30px] items-start justify-center">
               <motion.svg

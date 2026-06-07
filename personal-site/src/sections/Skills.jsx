@@ -22,7 +22,7 @@ export default function Skills(){
                     <SkillBadge skill="C#"/>
                     <SkillBadge skill=".NET"/>
                     <SkillBadge skill="TypeScript"/>
-                    <SkillBadge skill="Node.js"/>
+                    <SkillBadge skill="Node"/>
                     <SkillBadge skill="Express"/>
                     <SkillBadge skill="Python"/>
                     
@@ -44,7 +44,7 @@ export default function Skills(){
                     <SkillBadge skill="GitHub"/>
                     <SkillBadge skill="Docker"/>
                     <SkillBadge skill="EC2 (AWS)"/>
-                    <SkillBadge skill="SQS (AWS)"/>
+                    <SkillBadge skill="SNS (AWS)"/>
                     <SkillBadge skill="Solidity"/>
 
 
