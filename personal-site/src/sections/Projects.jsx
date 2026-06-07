@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import ProjectContainer from "../components/ProjectContainer"
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
 export default function Projects(){
     const [projects, setProjects] = useState([])
@@ -9,7 +10,7 @@ export default function Projects(){
     useEffect(() => {
         async function loadProjects() {
             try { 
-                const response = await fetch("/api/projects"); 
+                const response = await fetch(`${API_BASE_URL}/api/projects`); 
                 if (!response.ok) 
                     { 
                         throw new Error(`Request failed with status ${response.status}`); 

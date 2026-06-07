@@ -32,12 +32,19 @@ h3 {
   color: beige;
 }
 
-.badge-text{
+.big-badge-text{
   font-family: monospace;
   font-size: 20px;
   color: beige;
-
 }
+
+.small-badge-text{
+  font-family: monospace;
+  font-size: 13px;
+  color: beige;
+}
+
+
 
 
 
