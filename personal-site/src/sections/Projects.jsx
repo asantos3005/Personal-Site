@@ -37,7 +37,7 @@ export default function Projects(){
                 <input className="bg-olive-50 rounded-lg min-h-[50px] min-w-[70vw]" type="text" name="search" placeholder="Search by name or keyword" id="" />
             </form>
 
-            <div className="grid grid-cols-2 gap-5 justify-center items-center mt-5">
+            <div className="grid grid-cols-2 gap-5 justify-center items-center mt-5 place-items-center">
                 {/* Container for all the projects */}
                 {loading == false && projects.map((project) => (
                     <ProjectContainer
