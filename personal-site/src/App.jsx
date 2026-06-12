@@ -33,14 +33,16 @@ function App() {
   }, []);
 
   return (
-    <>
-    <Navbar/>
-    <Landing/>
-    <About/>
-    <Skills/>
-    <Projects/>
-    <Contact/>
-    </>
+    <div className="min-h-screen">
+      <Navbar />
+      <main className="overflow-x-hidden">
+        <Landing />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+    </div>
   )
 }
 

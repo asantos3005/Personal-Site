@@ -2,8 +2,11 @@ import { motion } from "motion/react";
 
 export default function Navbar(){
     return(
-       <nav className="bg-indigo-950 h-[50px] font-mono sticky z-100 top-0">
-            <ul className="flex gap-10 px-8 justify-end items-center h-full">
+       <nav className="bg-indigo-950 h-12 font-mono sticky z-100 top-0">
+            <ul className="flex 
+            gap-4 sm:gap-6 md:gap-10 
+            px-4 sm:px-6 md:px-8 
+            justify-end items-center h-full">
                 <motion.li className="text-olive-50"
                 whileHover={{
                         scale: 1.1,

@@ -4,16 +4,16 @@ import polygonGuy from '../assets/andrew3d.png'
 
 export default function Landing() {
   return (
-    <section className="relative h-screen overflow-hidden bg-slate-900" id="landing">
+    <section className="relative min-h-[100svh] overflow-hidden bg-slate-900" id="landing">
 
-      <motion.div className="flex flex-col justify-center items-center mt-[30vh]"
+      <motion.div className="relative z-20 flex min-h-[60svh] flex-col items-center justify-center px-4 text-center"
       initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
                 duration: 0.3,
                 scale: { type: "spring", visualDuration: 0.4, bounce: 0.2 },
             }}>
-        <h1>Andrew Santos</h1>
+        <h1 className="pt-8">Andrew Santos</h1>
         <h3 className="">Welcome to my portfolio!</h3>
         <a
             href="#about"
@@ -48,7 +48,7 @@ export default function Landing() {
       
       {/* Stars */}
       <motion.div
-        className="absolute left-[420px] top-[140px] h-[7px] w-[7px] rounded-full bg-white"
+        className="absolute left-[21%] top-[9%] h-[7px] w-[7px] rounded-full bg-white"
         animate={flashingStarAnimation}
         transition={{
           duration: 3.2,
@@ -61,7 +61,7 @@ export default function Landing() {
       />
 
       <motion.div
-        className="absolute right-[150px] top-[140px] h-[7px] w-[7px] rounded-full bg-white"
+        className="absolute right-[12%] top-[12%] h-[7px] w-[7px] rounded-full bg-white"
         animate={flashingStarAnimation}
         transition={{
           duration: 3.2,
@@ -74,7 +74,7 @@ export default function Landing() {
       />
 
       <motion.div
-        className="absolute right-[400px] top-[120px] h-[7px] w-[7px] rounded-full bg-white"
+        className="absolute right-[32%] top-[8%] h-[7px] w-[7px] rounded-full bg-white"
         animate={flashingStarAnimation}
         transition={{
           duration: 3.2,
@@ -86,7 +86,7 @@ export default function Landing() {
       />
 
       <motion.div
-        className="absolute left-[115px] top-[120px] h-[7px] w-[7px] rounded-full bg-white"
+        className="absolute left-[8%] top-[14%] h-[7px] w-[7px] rounded-full bg-white"
         animate={flashingStarAnimation}
         transition={{
           duration: 3.2,
@@ -138,8 +138,9 @@ export default function Landing() {
         />
       </motion.svg>
 
-       <motion.img src={polygonGuy} alt="polygonal 3d model of andrew in a rowboat" 
-      className="absolute bottom-[150px] right-20 max-w-[300px] z-3"
+
+      <motion.img src={polygonGuy} alt="polygonal 3d model of andrew in a rowboat" 
+      className="absolute bottom-[18%] right-4 z-10 w-[45vw] max-w-[260px] sm:right-10 sm:w-[35vw] md:right-20 md:max-w-[300px]"
       initial={{ y: 0 }}
         animate={{ y: 20 }}
         transition={{
