@@ -1,50 +1,82 @@
-html {
-  scroll-behavior: smooth;
+@import "tailwindcss";
+
+body {
+  background-color: var(--color-indigo-950);
+  font-family: var(--font-mono);
 }
 
-.body-text{
+h1,
+h2,
+h3,
+.body-text,
+.heading-text,
+.big-badge-text,
+.small-badge-text {
   color: beige;
-  font-family: monospace;
-  font-size: large;
-}
-
-.heading-text{
-  color: beige;
-  font-family: monospace;
-
+  font-family: var(--font-mono);
 }
 
 h1 {
-  font-family: monospace;
-  font-size: 50px;
-  color: beige;
+  font-size: var(--text-4xl);
+  line-height: var(--text-4xl--line-height);
 }
 
 h2 {
-  font-family: monospace;
-  font-size: 35px;
-  color: beige;
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+
 }
 
 h3 {
-  font-family: monospace;
-  font-size: 25px;
-  color: beige;
+  font-size: var(--text-xl);
+  line-height: var(--text-xl--line-height);
+
 }
 
-.big-badge-text{
-  font-family: monospace;
-  font-size: 20px;
-  color: beige;
+.body-text {
+  font-size: var(--text-base);
+  line-height: 1.7;
 }
 
-.small-badge-text{
-  font-family: monospace;
-  font-size: 13px;
-  color: beige;
+.big-badge-text {
+  font-size: var(--text-base);
 }
 
+.small-badge-text {
+  font-size: var(--text-xs);
+}
 
+@media (width >= 40rem) {
+  h1 {
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+  }
 
+  h2 {
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+  }
 
+  h3 {
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+  }
 
+  .body-text,
+  .big-badge-text {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+  }
+
+  .small-badge-text {
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+  }
+}
+
+@media (width >= 64rem) {
+  h1 {
+    font-size: var(--text-6xl);
+    line-height: var(--text-6xl--line-height);
+  }
+}

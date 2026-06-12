@@ -1,30 +1,30 @@
-import { motion } from "motion/react"
-import { contactButtonsAnimation } from "../animations/contactPageAnimations"
+import { motion } from "motion/react";
+import ProjectLinkButton from "../components/ProjectLinkButton";
+import { contactButtonsAnimation } from "../animations/contactPageAnimations";
 
-export default function Contact(){
+export default function Contact() {
+  return (
+    <section
+      id="contact"
+      className="min-h-[80svh] scroll-mt-14 bg-indigo-950 px-4 py-16 font-mono sm:px-6 lg:px-8"
+    >
+      <div className="mx-auto flex min-h-[calc(80svh-8rem)] w-full max-w-7xl flex-col">
+        <h1 className="mb-10 text-center md:text-left">Contact Me</h1>
 
-    return(
-        <section className="h-screen bg-indigo-950 font-mono px-8 scroll-mt-[50px]" id="contact">
-            <h1 className="mb-10">Contact Me</h1>
-            <address className="block mx-auto w-fit text-4xl text-olive-50 mt-[30vh]">ajrsantos77@gmail.com</address>
+        <div className="flex flex-1 flex-col text-center">
+          <address className="not-italic text-xl text-olive-50 break-all sm:text-2xl md:text-3xl lg:text-4xl">
+            <a href="mailto:ajrsantos77@gmail.com">
+              ajrsantos77@gmail.com
+            </a>
+          </address>
 
-            <div className="flex justify-center gap-5 mt-3">
-                <motion.a className="bg-olive-50 p-5 rounded-md"
-                href="/Andrew-Santos-Software-Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={contactButtonsAnimation}
-                >My Resume</motion.a>
-
-                <motion.a href="https://github.com/asantos3005" className="bg-olive-50 p-5 rounded-md"
-                whileHover={contactButtonsAnimation}
-                >GitHub</motion.a>
-
-                <motion.a href="https://www.linkedin.com/in/andrew-santos-a23261284/" className="bg-olive-50 p-5 rounded-md"
-                whileHover={contactButtonsAnimation}
-                >Linkedin</motion.a>
-            </div>
-            
-        </section>
-    )
+          <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
+            <ProjectLinkButton link="/Andrew-Santos-Software-Resume.pdf" text="My Resume"/>
+            <ProjectLinkButton link="https://github.com/asantos3005" text="Github"/>
+            <ProjectLinkButton link="https://www.linkedin.com/in/andrew-santos-a23261284/" text="LinkedIn"/>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
