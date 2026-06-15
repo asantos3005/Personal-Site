@@ -1,13 +1,19 @@
 import { useEffect, useState } from "react";
 import ProjectContainer from "../components/ProjectContainer";
+import { motion } from "motion/react";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(4);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const visibleProjects = projects.slice(0, visibleCount)
+  const hasMoreProjects = visibleCount < projects.length
+
 
   useEffect(() => {
     async function loadProjects() {
@@ -44,6 +50,11 @@ export default function Projects() {
 
     loadProjects();
   }, [search]);
+
+  useEffect(() => {
+  setVisibleCount(4);
+}, [search]);
+
 
   return (
     <section
@@ -86,18 +97,32 @@ export default function Projects() {
         )}
 
         {!loading && !error && projects.length > 0 && (
-          <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectContainer
-                key={project.id}
-                projectName={project.title}
-                projectDescription={project.longDescription}
-                skills={project.skills}
-                githubLink={project.githubUrl}
-                demoLink={project.demoUrl}
-              />
-            ))}
+          <div className="flex flex-col justify-center items-center gap-5">
+            <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+              {visibleProjects.map((project) => (
+                <ProjectContainer
+                  key={project.id}
+                  projectName={project.title}
+                  projectDescription={project.longDescription}
+                  skills={project.skills}
+                  githubLink={project.githubUrl}
+                  demoLink={project.demoUrl}
+                />
+              ))}
+            </div>
+            { hasMoreProjects && 
+              <motion.button
+              className="text-slate-50 mx-auto" 
+              type="button"
+              onClick={()=>{setVisibleCount(prev => prev + 4);
+              }}
+              whileHover={{opacity: 0.7}}
+              >
+                More Projects +
+              </motion.button>
+            }
           </div>
+          
         )}
       </div>
     </section>
