@@ -7,7 +7,7 @@ export default function Skills() {
       className="min-h-[100svh] scroll-mt-14 bg-indigo-950 px-4 py-16 sm:px-6 lg:px-8"
     >
       <div className="mx-auto w-full max-w-7xl">
-        <h1 className="mb-10 text-center md:text-left">Skills</h1>
+        <h1 className="mb-8 text-center md:text-left">Skills</h1>
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Front End Skills */}

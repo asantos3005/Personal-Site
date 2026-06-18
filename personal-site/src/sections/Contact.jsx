@@ -9,7 +9,7 @@ export default function Contact() {
       className="min-h-[80svh] scroll-mt-14 bg-indigo-950 px-4 py-16 font-mono sm:px-6 lg:px-8"
     >
       <div className="mx-auto flex min-h-[calc(80svh-8rem)] w-full max-w-7xl flex-col">
-        <h1 className="mb-10 text-center md:text-left">Contact Me</h1>
+        <h1 className="mb-8 text-center md:text-left">Contact Me</h1>
 
         <div className="flex flex-1 flex-col text-center">
           <address className="not-italic text-xl text-olive-50 break-all sm:text-2xl md:text-3xl lg:text-4xl">

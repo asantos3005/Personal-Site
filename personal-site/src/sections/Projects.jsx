@@ -62,11 +62,11 @@ export default function Projects() {
       className="min-h-[100svh] scroll-mt-14 bg-indigo-950 px-4 py-16 sm:px-6 lg:px-8"
     >
       <div className="mx-auto w-full max-w-6xl">
-        <h1 className="text-center md:text-left">Projects and Experiences</h1>
+        <h1 className="mb-8 text-center md:text-left">Projects and Experiences</h1>
 
         <form
           onSubmit={(event) => event.preventDefault()}
-          className="mt-6 flex justify-center md:justify-start"
+          className="flex justify-center md:justify-start"
         >
           <input
             className="min-h-[50px] w-full max-w-2xl rounded-lg bg-olive-50 px-4"

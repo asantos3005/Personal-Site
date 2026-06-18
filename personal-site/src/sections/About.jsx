@@ -15,7 +15,7 @@ export default function About() {
     >
 
         <div className="max-w-2xl text-center md:text-left">
-            <h1>About Me</h1>
+            <h1 className="mb-8">About Me</h1>
 
             <p className="body-text mb-5">
                 I’m Andrew, a computer science graduate based in Brisbane with an
