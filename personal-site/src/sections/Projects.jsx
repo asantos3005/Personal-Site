@@ -14,6 +14,10 @@ export default function Projects() {
   const visibleProjects = projects.slice(0, visibleCount)
   const hasMoreProjects = visibleCount < projects.length
 
+  function handleSearchChange(event) {
+    setSearch(event.target.value);
+    setVisibleCount(4);
+  }
 
   useEffect(() => {
     async function loadProjects() {
@@ -51,11 +55,6 @@ export default function Projects() {
     loadProjects();
   }, [search]);
 
-  useEffect(() => {
-  setVisibleCount(4);
-}, [search]);
-
-
   return (
     <section
       id="projects"
@@ -74,7 +73,7 @@ export default function Projects() {
             name="search"
             placeholder="Search by name or keyword"
             value={search}
-            onChange={(event) => setSearch(event.target.value)}
+            onChange={handleSearchChange}
           />
         </form>
 

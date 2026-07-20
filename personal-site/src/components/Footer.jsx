@@ -1,5 +1,3 @@
-import { footer } from "motion/react-client";
-
 export default function Footer(){
 
     return(

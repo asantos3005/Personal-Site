@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { a } from "motion/react-client";
 
 export default function ProjectLinkButton(props){
     if (props.text == "My Resume"){
