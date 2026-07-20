@@ -1,6 +1,16 @@
 import SkillBadge from "./SkillBadge";
 import ProjectLinkButton from "./ProjectLinkButton";
 import { motion } from "motion/react";
+import { Maximize2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function ProjectContainer(props) {
   return (
@@ -10,6 +20,8 @@ export default function ProjectContainer(props) {
         <h3>{props.projectName}</h3>
 
         <p className="body-text px-3 line-clamp-3">{props.projectDescription}</p>
+
+        
 
         <div className="flex flex-wrap gap-2 justify-center">
           {props.skills?.map((skill) => (
@@ -24,6 +36,25 @@ export default function ProjectContainer(props) {
             <ProjectLinkButton link={props.demoLink} text="Demo"/>
             )}
         </div>
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              className="bg-olive-50 font-mono text-indigo-950 hover:bg-olive-100"
+              type="button"
+            >
+              <Maximize2 />
+              More Details
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>{props.projectName}</DialogTitle>
+              <DialogDescription>Details</DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+
     </motion.div>
   );
 }
