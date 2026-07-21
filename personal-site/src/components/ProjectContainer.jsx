@@ -46,11 +46,11 @@ export default function ProjectContainer(props) {
                   More Details
                 </Button>
               </DialogTrigger>
-              <DialogContent className="bg-blue-950 min-w-[50svw]">
+              <DialogContent className="bg-blue-950 text-white min-w-[50svw]">
                 <DialogHeader>
                   <DialogTitle>{props.projectName}</DialogTitle>
                   <DialogDescription>{props.projectDescription}
-                    <div className="flex flex-wrap gap-2 justify-center mt-2">
+                    <div className="flex flex-wrap gap-2 justify-center mt-4">
 
                       {props.skills?.map((skill) => (
                         <SkillBadge key={skill.slug} skill={skill.name} size='small' />
@@ -58,7 +58,7 @@ export default function ProjectContainer(props) {
                     </div>
                   </DialogDescription>
                 </DialogHeader>
-                <div className="flex justify-evenly w-full">
+                <div className="flex justify-evenly w-full text-black">
                     <ProjectLinkButton link={props.githubLink} text="GitHub"/>
                     {props.demoLink && (
                     <ProjectLinkButton link={props.demoLink} text="Demo"/>
