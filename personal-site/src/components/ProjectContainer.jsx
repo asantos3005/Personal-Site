@@ -2,7 +2,6 @@ import SkillBadge from "./SkillBadge";
 import ProjectLinkButton from "./ProjectLinkButton";
 import { motion } from "motion/react";
 import { Maximize2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -47,13 +46,19 @@ export default function ProjectContainer(props) {
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button
+                 {/*
+                  <Button
                   className="bg-olive-50 font-mono text-indigo-950 hover:bg-olive-100"
                   type="button"
-                >
-                  <Maximize2 />
-                  More Details
-                </Button>
+                  >
+                    <Maximize2 />
+                    More Details
+                  </Button>
+                 */}
+                 <ProjectLinkButton text="More Details" icon={<Maximize2 />} />
+                  
+                 
+                
               </DialogTrigger>
               <DialogContent className="bg-blue-950 text-white min-w-[50svw]">
                 <DialogHeader>
