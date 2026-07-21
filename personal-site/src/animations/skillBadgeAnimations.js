@@ -1,5 +1,3 @@
-import { scale } from "motion/react";
-
 export const skillBadgeAnimation = {
     starting:{
         boxShadow: "0px 0px 0px 0px rgba(255, 255, 255, 0.76)"

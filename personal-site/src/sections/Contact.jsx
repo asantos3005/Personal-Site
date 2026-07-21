@@ -1,6 +1,4 @@
-import { motion } from "motion/react";
 import ProjectLinkButton from "../components/ProjectLinkButton";
-import { contactButtonsAnimation } from "../animations/contactPageAnimations";
 
 export default function Contact() {
   return (

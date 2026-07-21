@@ -1,6 +1,16 @@
 import SkillBadge from "./SkillBadge";
 import ProjectLinkButton from "./ProjectLinkButton";
 import { motion } from "motion/react";
+import { Maximize2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function ProjectContainer(props) {
   return (
@@ -10,6 +20,8 @@ export default function ProjectContainer(props) {
         <h3>{props.projectName}</h3>
 
         <p className="body-text px-3 line-clamp-3">{props.projectDescription}</p>
+
+        
 
         <div className="flex flex-wrap gap-2 justify-center">
           {props.skills?.map((skill) => (
@@ -23,7 +35,41 @@ export default function ProjectContainer(props) {
             {props.demoLink && (
             <ProjectLinkButton link={props.demoLink} text="Demo"/>
             )}
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button
+                  className="bg-olive-50 font-mono text-indigo-950 hover:bg-olive-100"
+                  type="button"
+                >
+                  <Maximize2 />
+                  More Details
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="bg-blue-950 text-white min-w-[50svw]">
+                <DialogHeader>
+                  <DialogTitle>{props.projectName}</DialogTitle>
+                  <DialogDescription>{props.projectDescription}
+                    <div className="flex flex-wrap gap-2 justify-center mt-4">
+
+                      {props.skills?.map((skill) => (
+                        <SkillBadge key={skill.slug} skill={skill.name} size='small' />
+                      ))}
+                    </div>
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex justify-evenly w-full text-black">
+                    <ProjectLinkButton link={props.githubLink} text="GitHub"/>
+                    {props.demoLink && (
+                    <ProjectLinkButton link={props.demoLink} text="Demo"/>
+                    )}
+                </div>
+              </DialogContent>
+            </Dialog>
+
         </div>
+
+        
     </motion.div>
   );
 }
